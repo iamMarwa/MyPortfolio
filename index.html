@@ -9,6 +9,67 @@
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
         <title>Marwa Alnahdi</title>
         <style>
+          /* Resets */
+* { 
+  box-sizing: border-box; 
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  font-family: 'Raleway', sans-serif;
+}
+
+/* Centering items, font + background */
+body {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  justify-items: center;
+  align-items: center;
+  background: #f2f2f2;
+}
+
+/* Label */
+label {
+  display: block;
+  text-align: start;
+  color: #cabbbb;
+  font-weight: 600;
+  font-size: 30px;
+}
+
+/* Form */
+form {
+  width: 450px;
+  background:#131313;
+  border-radius: 17px;
+  padding: 50px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+}
+
+/* Input */
+.inputfield {
+  font-size: 1.1em;
+  font-weight: bold;
+  display: block;
+  height: 44px;
+  width: 100%;
+  outline: none;
+  border-radius: 10px;
+  transition: all 1s;
+  border: 3px solid rgba(102,51,153,0);
+  background: #212121;
+  color: white; 
+  margin: 1em 0 2em 0;
+  padding: 2em;
+}
+
+input[type="text"]:focus, input[type="email"]:focus {
+  border: 3px solid rgb(179, 171, 171);
+}
+
+
             .wh-icon {
                 width: 160px !important;
                 text-align: center;
@@ -42,7 +103,7 @@ section {
     <body>
         <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
             <div class="container-fluid">
-              <a class="navbar-brand" href="#home">Marwa</a>
+              <a class="navbar-brand" href="#home"><img src="./logo.png"></a>
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
               </button>
@@ -67,21 +128,21 @@ section {
               </div>
             </div>
           </nav>
-          <br>
-          <br><br><br><br>
-  <div class="px-4 py-5 my-5 text-center" id="home">
-    <h1 class="display-5 fw-bold">Hi! I am Marwa</h1><br>
-    <div class="col-lg-6 mx-auto">
-      <p class="lead mb-4">A Developer who creates web applications and mobile applications.</p><br>
-      <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
-        <button type="button" class="btn btn-outline-secondary btn-lg px-4" onclick="location.href='#work';">CHECK MY WORK</button>
-      </div>
-    </div>
-  </div>
-  <br>
-  <br>
+          <div class="container col-xxl-8 px-4 py-5">
+            <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+              <div class="col-10 col-sm-8 col-lg-6">
+                <img src="./ImgHero.jpg" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="700" height="500" loading="lazy">
+              </div>
+              <div class="col-lg-6">
+                <h1 class="display-5 fw-bold lh-1 mb-3">Hi! I am Marwa</h1>
+                <p class="lead">A Developer who creates web applications and mobile applications.</p>
+                <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+                  <button type="button" class="btn btn-outline-secondary btn-lg px-4" onclick="location.href='#work';">CHECK MY WORK</button>
+                </div>
+              </div>
+            </div>
+          </div>
   <!-- My Work -->
-  <br>
   <div class="container px-4 py-5" id="work">
     <h2 class="pb-2 border-bottom">My work</h2>
 
@@ -105,6 +166,22 @@ section {
       <h1 class="display-5 fw-bold text-white">ABOUT ME</h1>
       <div class="col-lg-6 mx-auto">
         <p class="fs-5 mb-4">A passionate web and mobile developer from Saudi Arabia. I have an experience of building Web and Mobile applications with HTML/CSS/JavaScript / PHP(Laravel) / Python / Flutter and some other libraries and frameworks.</p>
+        <form
+        action="https://formspree.io/f/mwkaarlk"
+        method="POST"
+      >
+        <label>
+          Contact me! <br>
+          Your email:
+          <input type="email" name="_replyto">
+        </label>
+        <label>
+          Your message:
+          <textarea name="message"></textarea>
+        </label>
+        <!-- your other form fields go here -->
+        <button type="submit">Send</button>
+      </form>
       </div>
     </div>
   </div>
